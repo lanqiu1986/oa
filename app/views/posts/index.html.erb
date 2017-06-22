@@ -8,6 +8,7 @@
         <td>#</td>
         <td>Title</td>
         <td>Content</td>
+        <td>Category</td>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
           <td>#</td>
           <td><%= link_to(post.title, post_path(post)) %></td>
           <td><%= post.content %></td>
+          <td><%= post.category.id %></td>
           <td>
               <%= link_to("Edit", edit_post_path(post), class: "btn btn-sm btn-default")%>
               <%= link_to("Delete", post_path(post),    class: "btn btn-sm btn-default",
