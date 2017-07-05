@@ -9,6 +9,7 @@
         <td>Title</td>
         <td>Create Data</td>
         <td>Update Data</td>
+        <td>Category</td>
       </tr>
     </thead>
     <tbody>
@@ -18,11 +19,7 @@
           <td><%= link_to(post.title, post_path(post)) %></td>
           <td><%= post.created_at.to_s(:ymd) %></td>
           <td><%= post.updated_at.to_s(:ymd)  %></td>
-          <td>
-              <%= link_to("Edit", edit_post_path(post), class: "btn btn-sm btn-default")%>
-              <%= link_to("Delete", post_path(post),    class: "btn btn-sm btn-default",
-                          method: :delete, data: { confirm: "Are you sure?" } )%>
-          </td>
+          <td><%= post.category_id %></td>
         </tr>
       <% end %>
     </tbody>
