@@ -1,0 +1,15 @@
+<%= render :partial => "posts/search_bar" %>
+
+<div class="col-md-12">
+
+    <% if @posts.blank? %>
+      <br>
+      <h3 class="text-center">
+        No posts matched yet, please try again.
+      </h3>
+    <% else %>
+      <h3 class="text-center" style="margin-top: 30px;">Total find <%= @posts.count %> posts </h3>
+      <hr />
+        <%= render :partial => "posts_item", :collention => @posts, :as => :post %>
+    <% end %>
+</div>
