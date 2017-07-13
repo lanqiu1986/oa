@@ -11,5 +11,8 @@
       <h3 class="text-center" style="margin-top: 30px;">Total find <%= @posts.count %> posts </h3>
       <hr />
         <%= render :partial => "posts_item", :collention => @posts, :as => :post %>
+      <div class="text-center">
+        <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+      </div>
     <% end %>
 </div>
