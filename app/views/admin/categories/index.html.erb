@@ -1,0 +1,30 @@
+<div class="col-md-12">
+  <div class="category">
+    <%= link_to("New category", new_admin_category_path, class: "btn btn-primary pull-right") %>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Name</td>
+        <td>Create Data</td>
+        <td>Update Data</td>
+        <td>Edit</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td>#</td>
+          <td><%= category.name %></td>
+          <td><%= category.created_at.to_s(:ymd) %></td>
+          <td><%= category.updated_at.to_s(:ymd)  %></td>
+          <td><%= link_to('edit', edit_admin_category_path(category), class: "btn btn-sm btn-default") %></td>
+          <td><%= link_to('Delete', admin_category_path(category), class: "btn btn-sm btn-default", method: :delete, data: { confirm: "Are you sure?"}) %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
