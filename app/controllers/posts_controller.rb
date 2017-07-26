@@ -5,7 +5,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order("updated_at DESC").paginate(:page => params[:page], :per_page => 20)
+    if params[:category_id].blank?
+      @posts = Post.all.order("updated_at DESC").paginate(:page => params[:page], :per_page => 20)
+    else
+      @posts = Post.where(category_id: params[:category_id]).order("updated_at DESC").paginate(:page => params[:page], :per_page => 20)
+    end
   end
 
   # GET /posts/1

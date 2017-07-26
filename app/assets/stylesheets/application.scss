@@ -16,3 +16,28 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+//chang global a:hover style
+a:hover {
+  color: #000;
+  background-color: #FFF;
+  text-decoration: none;
+ }
+//sidebar style
+ .side-list {
+   height:40px;
+   font-size: 15px;
+   text-align: center;
+ }
+ .side-list a{
+   color: #A9A9A9;
+}
+.side-list a:hover {
+  color: #000;
+  background-color: #FFF;
+  text-decoration: none;
+ }
+ //change post/show h2
+ .show h2{
+   text-align: center;
+ }

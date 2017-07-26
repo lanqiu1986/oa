@@ -1,0 +1,7 @@
+<div class="col-md-2">
+  <ul class="list-unstyled">
+    <% Category.all.each do |category| %>
+      <li class="side-list"><%= link_to(category.name, posts_path(category_id: category.id)) %></li>
+    <% end %>
+  </ul>
+</div>
