@@ -17,11 +17,14 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-//chang global a:hover style
+//chang global a:hover a:active style
 a:hover {
   color: #000;
   background-color: #FFF;
   text-decoration: none;
+ }
+ a:active {
+   color: #000;
  }
 //sidebar style
  .side-list {
@@ -32,11 +35,13 @@ a:hover {
  .side-list a{
    color: #A9A9A9;
 }
+
 .side-list a:hover {
   color: #000;
   background-color: #FFF;
   text-decoration: none;
  }
+
  //change post/show h2
  .show h2{
    text-align: center;
