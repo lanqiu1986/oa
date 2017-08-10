@@ -1,0 +1,5 @@
+<%= Time.now.strftime('%Y-%m-%d') %>
+<% sum=0 %>
+
+<% @his.each {|a| sum+=a} %>
+<%= sum %>

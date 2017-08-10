@@ -43,6 +43,8 @@ gem 'mini_magick'
 gem 'ransack'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'activerecord-oracle_enhanced-adapter'
+gem 'ruby-oci8'
 
 
 group :development, :test do

@@ -85,3 +85,9 @@ production:
   database: document_production
   username: postgres
   password: 0
+
+qc:
+  adapter: oracle_enhanced
+  database: jlhis
+  username: his3
+  password: his3
