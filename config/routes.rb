@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   namespace :admin do
-    resources :posts
+    resources :posts do
+      collection do
+        get :search
+      end
+    end
     resources :categories
   end
 

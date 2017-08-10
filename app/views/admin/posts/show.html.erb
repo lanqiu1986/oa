@@ -1,6 +1,8 @@
-<h1> <%= @post.title %> </h1>
+<div class="col-md-10 show">
+  <div class="pull-right">
+    <%= link_to("Edit", edit_admin_post_path, :class => "btn btn-default" ) %>
+  </div>
 
-<p>
-  <%= simple_format(@post.content) %>
-
-</p>
+  <h2><%= @post.title %></h2>
+  <p><%= sanitize @post.content %></p>
+</div>

@@ -1,7 +1,4 @@
 <div class="col-md-10 show">
-  <div class="post">
-    <%= link_to("Edit", edit_post_path(@post), class: "btn btn-primary pull-right")%>
-  </div>
   <h2><%= @post.title %></h2>
   <p><%= sanitize @post.content %></p>
 </div>
