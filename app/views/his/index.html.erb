@@ -1,5 +1,9 @@
-<%= Time.now.strftime('%Y-%m-%d') %>
-<% sum=0 %>
+<div class="his-content">
+<%= Time.now.strftime('%Y-%m-%d %R %A') %>
 
+<hr>
+<% sum=0 %>
 <% @his.each {|a| sum+=a} %>
 <%= sum %>
+
+</div>
