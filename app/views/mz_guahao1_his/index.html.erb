@@ -1,0 +1,20 @@
+<div class="his-content">
+  <h1><%= l Time.now, format: :long %></h1>
+  <br>
+  <hr>
+  <br>
+
+  <div class="">
+
+
+      <% sum=0 %>
+      <% @mzguahao1his.each {|a| sum+=a}%>
+
+      <p>挂号人数 &nbsp; &nbsp;&nbsp;<%= sum %></p>
+
+
+    <br>
+    <p>总收入 &nbsp;&nbsp;&nbsp;</p>
+  </div>
+
+</div>

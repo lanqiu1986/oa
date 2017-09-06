@@ -1,9 +1,79 @@
 <div class="his-content">
-<%= Time.now.strftime('%Y-%m-%d %R %A') %>
+  <br>
+  <h1><%= l Time.now, format: :long %></h1>
 
-<hr>
-<% sum=0 %>
-<% @his.each {|a| sum+=a} %>
-<%= sum %>
+  <div class="content">
+    <div class="bt"><p id="day">本日</p></div>
+    <div class="his-border day">
+      <% a= (@mz.first/10000).round; b= (@zy.first/10000).round%>
+      <table>
+        <tr>
+          <td>挂号人数</td>
+          <td><%= @rc.first %>人</td>
+        </tr>
+        <tr>
+          <td>门诊收入</td>
+          <td><%= a%>万元</td>
+        </tr>
+        <tr>
+          <td>住院收入</td>
+          <td><%= b %>万元</td>
+        </tr>
+        <tr>
+          <td>总收入</td>
+          <td><%= a+b %>万元</td>
+        </tr>
+      </table>
+    </div>
 
+    <div class="bt"><p id="month">本月</p></div>
+    <div class="his-border month">
+      <% a= (@mz_m.first/10000).round; b= (@zy_m.first/10000).round%>
+      <table>
+        <tbody>
+        <tr>
+          <td>挂号人数</td>
+          <td><%= @rc_m.first %>人</td>
+        </tr>
+        <tr>
+          <td>门诊收入</td>
+          <td><%= a%>万元</td>
+        </tr>
+        <tr>
+          <td>住院收入</td>
+          <td><%= b %>万元</td>
+        </tr>
+        <tr>
+          <td>总收入</td>
+          <td><%= a+b %>万元</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bt"><p id="year">本年</p></div>
+    <div class="his-border year">
+      <% a= (@mz_y.first/10000).round; b= (@zy_y.first/10000).round%>
+      <table>
+        <tbody>
+        <tr>
+          <td>挂号人数</td>
+          <td><%= @rc_y.first %>人</td>
+        </tr>
+        <tr>
+          <td>门诊收入</td>
+          <td><%= a%>万元</td>
+        </tr>
+        <tr>
+          <td>住院收入</td>
+          <td><%= b %>万元</td>
+        </tr>
+        <tr>
+          <td>总收入</td>
+          <td><%= a+b %>万元</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

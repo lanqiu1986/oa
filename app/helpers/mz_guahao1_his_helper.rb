@@ -1,0 +1,2 @@
+module MzGuahao1HisHelper
+end

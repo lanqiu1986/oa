@@ -2,11 +2,59 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div {
+  font-family: KaiTi, "楷体",
+  Georgia, "Times New Roman",
+               "Microsoft YaHei", "微软雅黑",
+               STXihei, "华文细黑",
+               serif;
+}
 .his-nav {
-  text-align: center;
+  margin: 0px -15px; //去掉空白边
+  padding: 10px 40px;
+}
+.his-nav a{
   font-size: 40px;
 }
 .his-content{
   text-align: center;
-  min-width: 30px;
+  margin: 30px auto 0;
+}
+.his-content h1{
+  text-align: right;
+}
+.content {
+  background-color: #eaebed;
+  margin: 0px -15px;
+  padding: 10px 0px 100px;
+  text-align: center;
+}
+.his-border{
+  margin: 0px auto;
+  border-style:none;
+  width: 600px;
+  background-color: #fff;
+
+  box-shadow: 5px 5px 15px #888888;
+}
+
+.his-border table {
+  border-collapse: separate;
+  border-spacing: 10px 40px; //要配合上一条代码使用，表格间距
+
+}
+.his-border td{      //表格内容居中和宽度，字体
+  text-align: center;
+  width:300px;
+  font-size: 45px;
+  vertical-align: middle;
+}
+.bt {
+
+  text-align: left;
+  margin:30px 50px;
+}
+.bt p {
+  font-size: 40px;
+  color: #4ab291;
 }

@@ -45,6 +45,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'activerecord-oracle_enhanced-adapter'
 gem 'ruby-oci8'
+gem "rails-i18n"
 
 
 group :development, :test do
